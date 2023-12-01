@@ -1,0 +1,106 @@
+---
+title: "HW5"
+author: "Zhuodiao Kuang"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, echo = FALSE, cache = FALSE, message = FALSE}
+rm(list = ls())
+library(knitr)
+library(tidyverse)
+library(kableExtra)
+library(ggplot2)
+## Global options
+opts_chunk$set(echo      = TRUE,
+	             cache     = TRUE,
+               prompt    = FALSE,
+               tidy      = FALSE,
+               comment   = NA,
+               message   = FALSE,
+               warning   = FALSE,
+               dpi       = 150,
+               fig.width = 8, 
+               fig.asp   = 5/7,
+               fig.align = "center")
+# attr.source = '.numberLines'
+```
+
+# Problem 1
+
+```{r}
+library(faraway)
+data<-state.x77
+head(data)
+
+
+```
+
+## a) Provide descriptive statistics for all variables of interest (continuous and categorical) – no test required.
+
+matrix with 50 rows and 8 columns giving the following statistics in the respective columns.
+
+**1.Population(continuous): **
+population estimate as of July 1, 1975
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,1])`
+
+
+**2.Income(continuous):**
+per capita income (1974)
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,2])`
+
+**3.Illiteracy(continuous):**
+illiteracy (1970, percent of population)
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,3])`
+
+
+**4.Life Exp(continuous):**
+life expectancy in years (1969–71)
+
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,4])`
+
+
+**5.Murder(continuous):**
+murder and non-negligent manslaughter rate per 100,000 population (1976)
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,5])`
+
+
+**6.HS Grad(continuous):**
+percent high-school graduates (1970)
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,6])`
+
+**7.Frost(continuous):**
+mean number of days with minimum temperature below freezing (1931–1960) in capital or large city
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,7])`
+
+
+
+**8.Area(continuous):**
+land area in square miles
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  are presented as follows:
+
+`r summary(data[,8])`
+
+
